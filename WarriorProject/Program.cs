@@ -1,7 +1,3 @@
-/*
- * A feladat a github-on olvasható!
- */
-
 using System;
 
 namespace WarriorProject
@@ -10,7 +6,13 @@ namespace WarriorProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Position position = new Position(2, -1);
+            position.ToConsole();
+            Warrior warrior = new Warrior("Peter the Iron Man", position);
+            warrior.ToConsole();
+            warrior.MoveHorizontal(3);
+            warrior.MoveVertical(-2);
+            warrior.ToConsole();
         }
     }
 }
